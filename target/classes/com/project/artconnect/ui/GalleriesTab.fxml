@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10.0"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.project.artconnect.ui.GalleryController">
+    <padding>
+        <Insets bottom="10.0" left="10.0"
+                right="10.0" top="10.0"/>
+    </padding>
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Button text="Add Gallery"
+                onAction="#handleAdd"
+                style="-fx-background-color: #27ae60;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+        <Button text="Edit Gallery"
+                onAction="#handleEdit"
+                style="-fx-background-color: #2980b9;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+        <Button text="Delete Gallery"
+                onAction="#handleDelete"
+                style="-fx-background-color: #e74c3c;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+    </HBox>
+
+    <TableView fx:id="galleryTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn"
+                         text="Gallery Name" prefWidth="180"/>
+            <TableColumn fx:id="addressColumn"
+                         text="Address" prefWidth="200"/>
+            <TableColumn fx:id="ratingColumn"
+                         text="Rating" prefWidth="80"/>
+            <TableColumn fx:id="exhibitionCountColumn"
+                         text="Exhibitions" prefWidth="110"/>
+        </columns>
+    </TableView>
+</VBox>
