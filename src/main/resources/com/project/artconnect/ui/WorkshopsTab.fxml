@@ -28,6 +28,18 @@
                 style="-fx-background-color: #e74c3c;
                        -fx-text-fill: white;
                        -fx-font-weight: bold;"/>
+        <Button text="Book Member"
+                onAction="#handleBookMember"
+                style="-fx-background-color: #8e44ad;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+
+        <!-- NEW: Cancel Booking button -->
+        <Button text="Cancel Booking"
+                onAction="#handleCancelBooking"
+                style="-fx-background-color: #d35400;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
     </HBox>
 
     <TableView fx:id="workshopTable" VBox.vgrow="ALWAYS">
